@@ -5,11 +5,14 @@ import lxml
 df = []
 
 for year in range(1997, 2024):
-    with open('shooting_{}.html'.format(year), encoding='utf-8') as f:
+    with open('./tables/shooting_{}.html'.format(year), encoding='utf-8') as f:
         page = f.read()
 
     soup = BeautifulSoup(page, "html.parser")
-    soup.find('tr', class_="thead").decompose()
+    trs = soup.find_all('tr', class_="thead")
+    for tr in trs:
+        tr.decompose()
+
     soup.find('tr', class_="over_header").decompose()
     shooting_table = soup.find(id="shooting_stats")
     player = pd.read_html(str(shooting_table))[0]
