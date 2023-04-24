@@ -1,3 +1,5 @@
+# Group Members : Diego Bobrow, Nicholas Tincani Ueki, Brandon Zhang
+
 import time
 from selenium import webdriver
 

@@ -1,3 +1,5 @@
+# Group Members : Diego Bobrow, Nicholas Tincani Ueki, Brandon Zhang
+
 import pandas as pd
 import csv
 
